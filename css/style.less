@@ -1,0 +1,252 @@
+/*----------------------variables-------------------------*/
+@color-bg:#2B2B2B;
+@color-text:#F6F6F6;
+@color-alert:#DE1B1B;
+@color-accent:#E9E581;
+
+
+@logo-font: 'Fredericka the Great';
+
+/*------------------------general-------------------------*/
+
+html {
+	font-size: 100%;
+	font-family: Arial, sans-serif;
+	line-height: 1.42;
+	color: @color-text;
+}
+body {
+	background: @color-bg;
+	color: @color-text;
+	margin: 0;
+	padding-top: 90px;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+a {
+	color: inherit;
+}
+
+.wrapper {
+	max-width: 1280px;
+	margin: 0 auto;
+}
+
+
+/*-------------------------header------------------------*/
+
+header {
+	float: left;
+	width: 100%;
+	padding: 0;
+	box-sizing: border-box;
+	background: @color-text;
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	border-bottom: 3px solid @color-alert;
+	box-shadow: 0 0px 0px 3px @color-text;
+
+	nav {
+		box-sizing: border-box;
+		width: 100%;
+		float: left;
+		padding: 0 15px;
+		color: @color-bg;
+
+		h1 {
+			position: relative;
+			padding: 0;
+			margin: 0;
+			color: @color-alert;
+			font-weight: 400;
+			font-size: 2rem;
+			font-family: @logo-font;
+			line-height: 60px;
+		}
+
+		ul {
+			text-align: center;
+
+		}
+		li {
+			display: inline-block;
+			//font-family: @logo-font;
+			padding: 0 5%;
+			line-height: 2em;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: @color-bg;
+			
+			&:hover {
+				color: @color-alert;
+			}
+			
+
+			a {
+				text-decoration: none;
+			}
+
+			/*
+			
+			
+			line-height: 60px;
+
+
+			*/
+		}
+	}
+
+}
+
+/*-------------------------nain------------------------*/
+
+main {
+	padding-top: 20px;
+}
+
+.works {
+	margin: 0;
+	li {
+		box-sizing: border-box;
+		width: 100%;
+		float: left;
+		padding: 15px;
+		padding-bottom: 50px;
+		}
+
+	a {
+		display: block;
+		margin: 0 auto 6%;
+		color: inherit;
+		font-weight: 700;
+		overflow: hidden;
+
+		figure {
+			margin: 0;
+			position: relative;
+		}
+
+		img {
+			width: 100%;
+		}
+
+		figcaption {
+			padding-bottom: 1em;
+
+		}
+
+		&:hover img{
+			top: 150px;
+		}
+
+		&:hover figcaption {
+			top: 0;
+			opacity: 1;
+		}
+	}
+
+}
+
+/*-----------------adaptibe---------------------*/
+
+@media screen and (min-width: 641px) {
+
+	.wrapper {
+		width: 600px;
+	}
+	.works li {
+		width: 300px;
+		a {
+			overflow: hidden;
+			text-decoration: none;
+			width: 270px;
+			height: 337px;
+			
+
+
+			img{
+				position: absolute;
+				top: 0;
+				z-index: 2;
+				margin: 0;
+				transition: all 0.35s 0s ease;;
+			}
+		
+			figcaption {
+				position: absolute;
+				top: 70px;
+				z-index: 1;
+				display: block;
+				padding: 0.5em;
+				opacity: 0;
+				transition: top 0.35s 0s ease, opacity 0.7s 0s ease-in;
+			}
+		}
+	}
+}
+
+
+@media screen and (min-width: 769px) {
+
+	.h1 {
+		float: left;
+		font-size: 3rem;
+	}
+	.nav {
+		float: right;
+		li {
+			padding: 0 1em;
+			line-height: 60px;
+
+			&:first-child {
+				padding-left: 0;
+			}
+			&:last-child {
+				padding-right: 0;
+			}
+		}
+	} 
+
+	.wrapper {
+		width: 769px;
+	}
+	.works li {
+		width: 256px;
+		a {
+			width: 226px;
+			height: 282px;
+		}
+	}
+}
+
+@media screen and (min-width: 993px) {
+	.wrapper {
+		width: 984px;
+	}
+	.works li {
+		width: 246px;
+		a {
+			width: 216px;
+			height: 270px;
+		}
+	}
+}
+
+@media screen and (min-width: 1140px) {
+	.wrapper {
+		width: 1080px;
+	}
+	.works li {
+		width: 270px;
+		a {
+			width: 240px;
+			height: 300px;
+		}
+	}
+}

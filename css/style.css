@@ -1,0 +1,202 @@
+/*----------------------variables-------------------------*/
+/*------------------------general-------------------------*/
+html {
+  font-size: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.42;
+  color: #f6f6f6;
+}
+body {
+  background: #2b2b2b;
+  color: #f6f6f6;
+  margin: 0;
+  padding-top: 90px;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  color: inherit;
+}
+.wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+/*-------------------------header------------------------*/
+header {
+  float: left;
+  width: 100%;
+  padding: 0;
+  box-sizing: border-box;
+  background: #f6f6f6;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 3px solid #de1b1b;
+  box-shadow: 0 0px 0px 3px #f6f6f6;
+}
+header nav {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding: 0 15px;
+  color: #2b2b2b;
+}
+header nav h1 {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  color: #de1b1b;
+  font-weight: 400;
+  font-size: 2rem;
+  font-family: 'Fredericka the Great';
+  line-height: 60px;
+}
+header nav ul {
+  text-align: center;
+}
+header nav li {
+  display: inline-block;
+  padding: 0 5%;
+  line-height: 2em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #2b2b2b;
+  /*
+			
+			
+			line-height: 60px;
+
+
+			*/
+}
+header nav li:hover {
+  color: #de1b1b;
+}
+header nav li a {
+  text-decoration: none;
+}
+/*-------------------------nain------------------------*/
+main {
+  padding-top: 20px;
+}
+.works {
+  margin: 0;
+}
+.works li {
+  box-sizing: border-box;
+  width: 100%;
+  float: left;
+  padding: 15px;
+  padding-bottom: 50px;
+}
+.works a {
+  display: block;
+  margin: 0 auto 6%;
+  color: inherit;
+  font-weight: 700;
+  overflow: hidden;
+}
+.works a figure {
+  margin: 0;
+  position: relative;
+}
+.works a img {
+  width: 100%;
+}
+.works a figcaption {
+  padding-bottom: 1em;
+}
+.works a:hover img {
+  top: 150px;
+}
+.works a:hover figcaption {
+  top: 0;
+  opacity: 1;
+}
+/*-----------------adaptibe---------------------*/
+@media screen and (min-width: 641px) {
+  .wrapper {
+    width: 600px;
+  }
+  .works li {
+    width: 300px;
+  }
+  .works li a {
+    overflow: hidden;
+    text-decoration: none;
+    width: 270px;
+    height: 337px;
+  }
+  .works li a img {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    margin: 0;
+    transition: all 0.35s 0s ease;
+  }
+  .works li a figcaption {
+    position: absolute;
+    top: 70px;
+    z-index: 1;
+    display: block;
+    padding: 0.5em;
+    opacity: 0;
+    transition: top 0.35s 0s ease, opacity 0.7s 0s ease-in;
+  }
+}
+@media screen and (min-width: 769px) {
+  .h1 {
+    float: left;
+    font-size: 3rem;
+  }
+  .nav {
+    float: right;
+  }
+  .nav li {
+    padding: 0 1em;
+    line-height: 60px;
+  }
+  .nav li:first-child {
+    padding-left: 0;
+  }
+  .nav li:last-child {
+    padding-right: 0;
+  }
+  .wrapper {
+    width: 769px;
+  }
+  .works li {
+    width: 256px;
+  }
+  .works li a {
+    width: 226px;
+    height: 282px;
+  }
+}
+@media screen and (min-width: 993px) {
+  .wrapper {
+    width: 984px;
+  }
+  .works li {
+    width: 246px;
+  }
+  .works li a {
+    width: 216px;
+    height: 270px;
+  }
+}
+@media screen and (min-width: 1140px) {
+  .wrapper {
+    width: 1080px;
+  }
+  .works li {
+    width: 270px;
+  }
+  .works li a {
+    width: 240px;
+    height: 300px;
+  }
+}
